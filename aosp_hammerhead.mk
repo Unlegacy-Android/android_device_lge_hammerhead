@@ -17,6 +17,9 @@ $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 PRODUCT_NAME := aosp_hammerhead
 
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/media_codecs_ffmpeg.xml.stub:/system/etc/media_codecs_ffmpeg.xml
+
 PRODUCT_PACKAGES += \
     Terminal \
     Launcher3
