@@ -141,3 +141,6 @@ TARGET_NEEDS_PLATFORM_TEXTRELS := \
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
+
+# TWRP
+TW_THEME := portrait_hdpi
