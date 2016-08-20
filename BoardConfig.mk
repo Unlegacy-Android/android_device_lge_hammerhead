@@ -138,3 +138,6 @@ BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
+
+# TWRP
+TW_THEME := portrait_hdpi
