@@ -110,8 +110,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
-DEVICE_PACKAGE_OVERLAYS := \
-    device/lge/hammerhead/overlay
+# Base AOSP overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/lge/hammerhead/overlay/aosp
 
 PRODUCT_PACKAGES := \
     android.hardware.wifi@1.0-service \
