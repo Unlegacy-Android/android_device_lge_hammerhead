@@ -121,6 +121,9 @@ USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 USE_DEVICE_SPECIFIC_CAMERA:= true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
+# Some of our vendor libs have text relocations
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
+TARGET_NEEDS_PLATFORM_TEXTRELS := \
+    $(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
