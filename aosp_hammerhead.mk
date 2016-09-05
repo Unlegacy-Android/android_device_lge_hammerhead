@@ -22,5 +22,6 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_PACKAGES += \
+    Terminal \
     Launcher3
 
