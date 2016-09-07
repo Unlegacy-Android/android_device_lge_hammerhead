@@ -21,6 +21,10 @@ PRODUCT_MODEL := Nexus 5
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/media_codecs_ffmpeg.xml.stub:/system/etc/media_codecs_ffmpeg.xml
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES += \
+    device/sample/etc/apns-full-conf.xml:/system/etc/apns-conf.xml
+
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
