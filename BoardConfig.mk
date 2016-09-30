@@ -149,6 +149,9 @@ ifeq ($(USE_SVELTE_KERNEL),true)
 MALLOC_SVELTE := true
 endif
 
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
 # Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
