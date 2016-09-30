@@ -147,6 +147,9 @@ endif
 
 USE_CLANG_PLATFORM_BUILD := true
 
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
 # Hardware
 BOARD_HARDWARE_CLASS := device/lge/hammerhead/cmhw
 
