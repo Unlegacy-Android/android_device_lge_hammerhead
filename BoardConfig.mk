@@ -127,4 +127,7 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 TARGET_NEEDS_PLATFORM_TEXTRELS := \
     $(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)
 
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
