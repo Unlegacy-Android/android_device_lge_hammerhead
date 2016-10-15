@@ -118,6 +118,9 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 # Some of our vendor libs have text relocations
 TARGET_NEEDS_PLATFORM_TEXTRELS := true
 
+# Camera/HAL flag for VideoNativeHandleMetadata
+TARGET_USES_MEDIA_EXTENSIONS := true
+
 BOARD_SEPOLICY_DIRS += device/lge/hammerhead/sepolicy
 
 ifneq ($(filter hammerhead_fp aosp_hammerhead_fp,$(TARGET_PRODUCT)),)
