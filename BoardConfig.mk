@@ -145,8 +145,6 @@ ifeq ($(USE_SVELTE_KERNEL),true)
 MALLOC_SVELTE := true
 endif
 
-USE_CLANG_PLATFORM_BUILD := true
-
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
