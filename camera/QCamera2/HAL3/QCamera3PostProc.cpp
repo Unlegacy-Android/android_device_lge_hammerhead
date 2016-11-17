@@ -919,11 +919,7 @@ int32_t QCamera3PostProcessor::encodeData(qcamera_jpeg_data_t *jpeg_job_data,
 
     cam_dimension_t dst_dim;
     memset(&dst_dim, 0, sizeof(cam_dimension_t));
-
-    if (NO_ERROR != m_parent->getStreamSize(dst_dim)) {
-       ALOGE("%s: Failed to get size of the JPEG stream", __func__);
-       return UNKNOWN_ERROR;
-    }
+    srcChannel->getStreamByIndex(0)->getFrameDimension(dst_dim);
 
     // main dim
     jpg_job.encode_job.main_dim.src_dim = src_dim;

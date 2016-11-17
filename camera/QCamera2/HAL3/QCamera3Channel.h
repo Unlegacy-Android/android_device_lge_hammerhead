@@ -280,7 +280,6 @@ public:
             void *userdata);
     int32_t queueReprocMetadata(metadata_buffer_t *metadata);
     virtual int32_t registerBuffer(buffer_handle_t *buffer);
-    int32_t getStreamSize(cam_dimension_t &dim);
 
 private:
     int32_t queueJpegSetting(int32_t out_buf_index, metadata_buffer_t *metadata);
