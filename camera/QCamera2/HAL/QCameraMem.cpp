@@ -804,11 +804,7 @@ int QCameraVideoMemory::allocate(int count, int size)
 
     for (int i = 0; i < count; i ++) {
         mMetadata[i] = mGetMemory(-1,
-#ifdef USE_NATIVE_HANDLE_SOURCE
-                sizeof(struct encoder_nativehandle_buffer_type), 1, this);
-#else
                 sizeof(struct encoder_media_buffer_type), 1, this);
-#endif
         if (!mMetadata[i]) {
             ALOGE("allocation of video metadata failed.");
             for (int j = 0; j < i-1; j ++)
@@ -816,19 +812,10 @@ int QCameraVideoMemory::allocate(int count, int size)
             QCameraStreamMemory::deallocate();
             return NO_MEMORY;
         }
-#ifdef USE_NATIVE_HANDLE_SOURCE
-        struct encoder_nativehandle_buffer_type * packet =
-            (struct encoder_nativehandle_buffer_type *)mMetadata[i]->data;
-#else
         struct encoder_media_buffer_type * packet =
             (struct encoder_media_buffer_type *)mMetadata[i]->data;
-#endif
         packet->meta_handle = native_handle_create(1, 2); //1 fd, 1 offset and 1 size
-#ifdef USE_NATIVE_HANDLE_SOURCE
-        packet->buffer_type = kMetadataBufferTypeNativeHandleSource;
-#else
         packet->buffer_type = kMetadataBufferTypeCameraSource;
-#endif
         native_handle_t * nh = const_cast<native_handle_t *>(packet->meta_handle);
         nh->data[0] = mMemInfo[i].fd;
         nh->data[1] = 0;

@@ -21,12 +21,6 @@ LOCAL_CFLAGS = -Wall -Werror -DDEFAULT_ZSL_MODE_ON -DDEFAULT_DENOISE_MODE_ON
 #Debug logs are enabled
 #LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
 
-# Starting from Android 7.0, camera and encoder are in separated processes.
-# Use NativeHandleSource instead of CameraSource for metadata
-ifeq ($(TARGET_USES_MEDIA_EXTENSIONS),true)
-LOCAL_CFLAGS += -DUSE_NATIVE_HANDLE_SOURCE
-endif
-
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \
         frameworks/native/include/media/hardware \
