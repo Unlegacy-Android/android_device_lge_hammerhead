@@ -201,8 +201,18 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
+    libloc_adapter \
+    libloc_eng \
+    libloc_api_v02 \
+    libloc_ds_api \
+    libloc_core \
+    libizat_core \
+    libgeofence \
     libgps.utils \
-    gps.msm8974
+    gps.msm8974 \
+    flp.msm8974 \
+    liblbs_core \
+    flp.conf
 
 # NFC packages
 PRODUCT_PACKAGES += \
