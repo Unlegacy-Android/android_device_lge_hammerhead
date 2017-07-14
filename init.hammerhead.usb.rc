@@ -33,6 +33,8 @@ on post-fs
     setprop sys.usb.mtp.device_type 3
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
+    setprop sys.usb.ffs.aio_compat 1
+
 # MTP
 on property:sys.usb.config=mtp
     stop adbd
