@@ -23,5 +23,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     Terminal \
+    WallpaperPicker \
     Launcher3
 
