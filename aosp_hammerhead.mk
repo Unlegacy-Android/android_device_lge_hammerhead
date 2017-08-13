@@ -27,5 +27,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Terminal \
+    WallpaperPicker \
     Launcher3
 
