@@ -342,6 +342,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=1 \
     persist.radio.mode_pref_nv10=1
 
+# adb has root
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.secure=0
+
 # update 1x signal strength after 2s
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
