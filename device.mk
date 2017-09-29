@@ -115,6 +115,9 @@ PRODUCT_PACKAGES := \
     wpa_supplicant \
     wpa_supplicant.conf
 
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
@@ -146,6 +149,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
     audio.primary.msm8974 \
     audio.a2dp.default \
     audio.usb.default \
@@ -155,6 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Audio effects
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@2.0-impl \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
@@ -169,12 +174,15 @@ PRODUCT_PACKAGES += \
     libqomx_core \
     libmmcamera_interface \
     libmmjpeg_interface \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl \
     camera.hammerhead \
     mm-jpeg-interface-test \
     mm-qcamera-app \
     Snap
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.msm8974
 
 PRODUCT_PACKAGES += \
@@ -201,14 +209,20 @@ PRODUCT_PACKAGES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     nfc_nci.bcm2079x.default \
     NfcNci \
     Tag
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.hammerhead
 
 PRODUCT_PACKAGES += \
@@ -222,7 +236,12 @@ PRODUCT_PACKAGES += \
     bdAddrLoader
 
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.hammerhead
+
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
@@ -248,6 +267,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # Set sensor streaming rate
 PRODUCT_PROPERTY_OVERRIDES += \
