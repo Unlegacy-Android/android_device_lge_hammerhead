@@ -190,10 +190,6 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     Snap
 
-# Disable camera Treble path temporarily, b/34786432
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera.disable_treble=1
-
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service \
