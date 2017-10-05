@@ -109,6 +109,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/lge/hammerhead/overlay/aosp
 
 PRODUCT_PACKAGES := \
+    android.hardware.wifi@1.0-service \
     libwpa_client \
     hostapd \
     wificond \
