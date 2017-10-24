@@ -223,10 +223,11 @@ switched:
 static int set_light_battery(struct light_device_t* dev,
         struct light_state_t const* state)
 {
+#if 0
     pthread_mutex_lock(&g_lock);
     set_light_locked(state, 0);
     pthread_mutex_unlock(&g_lock);
-
+#endif
     return 0;
 }
 
