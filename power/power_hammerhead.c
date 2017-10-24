@@ -405,6 +405,7 @@ static int power_open(const hw_module_t* module, const char* name,
     dev->common.tag = HARDWARE_MODULE_TAG;
     dev->common.module_api_version = POWER_MODULE_API_VERSION_0_2;
     dev->common.hal_api_version = HARDWARE_HAL_API_VERSION;
+    dev->common.name = "Hammerhead Power HAL";
 
     dev->init = power_init;
     dev->powerHint = power_hint;
@@ -431,8 +432,4 @@ struct power_module HAL_MODULE_INFO_SYM = {
         .author = "The Android Open Source Project",
         .methods = &power_module_methods,
     },
-
-    .init = power_init,
-    .setInteractive = power_set_interactive,
-    .powerHint = power_hint,
 };
