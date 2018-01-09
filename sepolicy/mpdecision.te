@@ -42,10 +42,9 @@ allow mpdecision sysfs_mpdecision:file rw_file_perms;
 # /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
 allow mpdecision sysfs:file write;
 
-# This is needed to allow mpdecision to look at system_server's
+# This is needed to allow mpdecision to look at power HAL's
 # /proc/PID/status file.
-r_dir_file(mpdecision, system_server)
-r_dir_file(mpdecision, mediaserver)
+r_dir_file(mpdecision, hal_power_default)
 
 allow mpdecision self:capability sys_nice;
 
