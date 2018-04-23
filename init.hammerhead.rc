@@ -158,7 +158,7 @@ on post-fs-data
 
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
-    symlink /system/etc/qcril.db /data/misc/radio/qcril.db
+    symlink /vendor/etc/qcril.db /data/misc/radio/qcril.db
 
     setprop vold.post_fs_data_done 1
 
@@ -288,28 +288,28 @@ on property:sys.boot_completed=1
 on property:ro.debuggable=1
     start ssr_ramdump
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmuxd /vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth wakelock gps
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /vendor/bin/netmgrd
     class main
     group radio system wakelock
 
 # QCOM sensor
-service sensors /system/bin/sensors.qcom
+service sensors /vendor/bin/sensors.qcom
     class main
     user root
     group root wakelock
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
     oneshot
@@ -328,7 +328,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
@@ -338,38 +338,38 @@ service charger /charger
     critical
     seclabel u:r:charger:s0
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input
 
-service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
+service bdAddrLoader /vendor/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
     class main
     user bluetooth
     group system bluetooth
     oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B \
+service bugreport /vendor/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
     class main
     disabled
     oneshot
     keycodes 114 115 116
 
-service mpdecision /system/bin/mpdecision --avg_comp --Nw=1:1.99 --Nw=2:2.99 --Nw=3:3.99 --Tw=2:140 --Tw=3:140 --Ts=2:190 --Ts=3:190
+service mpdecision /vendor/bin/mpdecision --avg_comp --Nw=1:1.99 --Nw=2:2.99 --Nw=3:3.99 --Tw=2:140 --Tw=3:140 --Ts=2:190 --Ts=3:190
    class main
    user root
    group root system readproc
    disabled
 
-service ssr_ramdump /system/bin/subsystem_ramdump -m -t emmc
+service ssr_ramdump /vendor/bin/subsystem_ramdump -m -t emmc
     class main
     user root
     group root
     disabled
 
-service thermal-engine /system/bin/thermal-engine-hh
+service thermal-engine /vendor/bin/thermal-engine-hh
    class main
    user root
    group radio system
@@ -380,7 +380,7 @@ service vss_init /vendor/bin/vss_init
     group root
     disabled
 
-service time_daemon /system/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
     capabilities SYS_TIME
     class late_start
     user system
