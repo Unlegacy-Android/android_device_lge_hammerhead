@@ -124,6 +124,8 @@ BOARD_SEPOLICY_DIRS += device/lge/hammerhead/sepolicy
 DEVICE_MANIFEST_FILE := device/lge/hammerhead/manifest.xml
 DEVICE_MATRIX_FILE := device/lge/hammerhead/compatibility_matrix.xml
 
+TARGET_SYSTEM_PROP := device/lge/hammerhead/system.prop
+
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_HAS_HH_VSYNC_ISSUE := true
