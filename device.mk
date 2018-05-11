@@ -91,10 +91,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
-# For GPS
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/sec_config:system/etc/sec_config
-
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -199,23 +195,17 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/gps.conf:system/etc/gps.conf
+    device/lge/hammerhead/gps.conf:system/etc/gps.conf \
+    device/lge/hammerhead/sec_config:system/etc/sec_config
 
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
-    libloc_adapter \
+    android.hardware.gnss@1.0-service \
     libloc_eng \
-    libloc_api_v02 \
-    libloc_ds_api \
     libloc_core \
-    libizat_core \
-    libgeofence \
     libgps.utils \
-    gps.msm8974 \
-    flp.msm8974 \
-    liblbs_core \
-    flp.conf
+    gps.msm8974
 
 # NFC packages
 PRODUCT_PACKAGES += \
