@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e23137e_37d18833",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2018-05-11T08:59:05Z",
+      "side": 1,
+      "message": "Why add Binderized service with changes? That would be coupled with manifest changes anyway.",
+      "range": {
+        "startLine": 204,
+        "startChar": 4,
+        "endLine": 204,
+        "endChar": 37
+      },
+      "revId": "f84bcca30d095de1f580b04423b01041ba16bca5",
+      "serverId": "d5e41ece-075f-43fb-b5a6-48951f3d7b1d",
+      "unresolved": false
+    }
+  ]
+}
