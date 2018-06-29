@@ -113,22 +113,22 @@
 
 # rmt_storage is a qualcomm specific daemon responsible
 # for servicing modem filesystem requests.
-/system/vendor/bin/rmt_storage            u:object_r:rmt_exec:s0
-/system/vendor/bin/bdAddrLoader           u:object_r:bluetooth_loader_exec:s0
-/system/vendor/bin/qmuxd                  u:object_r:qmux_exec:s0
-/system/vendor/bin/netmgrd                u:object_r:netmgrd_exec:s0
-/system/vendor/bin/mpdecision             u:object_r:mpdecision_exec:s0
-/system/vendor/bin/sensors\.qcom          u:object_r:sensors_exec:s0
-/system/vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
-/system/vendor/bin/qseecomd               u:object_r:tee_exec:s0
-/system/vendor/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
-/system/vendor/bin/thermal-engine-hh      u:object_r:thermald_exec:s0
-/system/vendor/bin/vss_init               u:object_r:vss_exec:s0
-/system/vendor/bin/time_daemon            u:object_r:time_exec:s0
-/system/vendor/bin/irsc_util              u:object_r:irsc_util_exec:s0
+/(vendor|system/vendor)/bin/rmt_storage            u:object_r:rmt_exec:s0
+/(vendor|system/vendor)/bin/bdAddrLoader           u:object_r:bluetooth_loader_exec:s0
+/(vendor|system/vendor)/bin/qmuxd                  u:object_r:qmux_exec:s0
+/(vendor|system/vendor)/bin/netmgrd                u:object_r:netmgrd_exec:s0
+/(vendor|system/vendor)/bin/mpdecision             u:object_r:mpdecision_exec:s0
+/(vendor|system/vendor)/bin/sensors\.qcom          u:object_r:sensors_exec:s0
+/(vendor|system/vendor)/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
+/(vendor|system/vendor)/bin/qseecomd               u:object_r:tee_exec:s0
+/(vendor|system/vendor)/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
+/(vendor|system/vendor)/bin/thermal-engine-hh      u:object_r:thermald_exec:s0
+/(vendor|system/vendor)/bin/vss_init               u:object_r:vss_exec:s0
+/(vendor|system/vendor)/bin/time_daemon            u:object_r:time_exec:s0
+/(vendor|system/vendor)/bin/irsc_util              u:object_r:irsc_util_exec:s0
 
 # Binderized services
-/system/vendor/bin/hw/android\.hardware\.power@1\.0-service.qcom     u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service.qcom     u:object_r:hal_power_default_exec:s0
 
 # Persist firmware filesystem
 /persist(/.*)?                    u:object_r:persist_file:s0
