@@ -21,7 +21,7 @@ LOCAL_SRC_FILES := dumpstate.cpp
 
 LOCAL_MODULE := libdumpstate.hammerhead
 
-LOCAL_PROPRIETARY_MODULE := true
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
