@@ -12,7 +12,7 @@ allow sensors self:capability chown;
 dontaudit sensors self:capability fsetid;
 
 # Access /data/misc/sensors/debug and /data/system/sensors/settings
-allow sensors self:capability { dac_override dac_read_search };
+#allow sensors self:capability { dac_override dac_read_search };
 
 # In a future release of Android, /data/app/sensor_ctl_socket moved
 # to /dev/socket/sensor_ctl_socket .

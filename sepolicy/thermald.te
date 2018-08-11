@@ -15,7 +15,7 @@ allow thermald self:netlink_kobject_uevent_socket { create setopt bind read };
 # the proper perms on those files are fixed this can likely be
 # reverted. We also want to auditallow every instance
 # of dac_override to track its behavior.
-allow thermald self:capability { dac_override net_admin };
+#allow thermald self:capability { dac_override net_admin };
 auditallow thermald self:capability dac_override;
 
 # Talk to qmuxd (/dev/socket/qmux_radio)

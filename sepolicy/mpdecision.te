@@ -3,7 +3,7 @@ type mpdecision, domain, device_domain_deprecated;
 type mpdecision_exec, exec_type, file_type;
 
 # DAC overrides
-allow mpdecision self:capability dac_override;
+#allow mpdecision self:capability dac_override;
 #auditallow mpdecision self:capability dac_override;
 
 # Started by init
