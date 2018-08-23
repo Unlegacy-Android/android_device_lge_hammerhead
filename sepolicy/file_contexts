@@ -70,6 +70,8 @@
 # Serial-to-Usb support
 /dev/ttyUSB0                           u:object_r:radio_device:s0
 
+/vensys/bin/hw/android\.hardware\.usb@1\.0-service\.basic u:object_r:hal_usb_default_exec:s0
+
 # Jpeg Engine support
 /dev/gemini.*                          u:object_r:video_device:s0
 # MSM camera related

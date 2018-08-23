@@ -34,7 +34,8 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 ifeq ($(ARM_EABI_TOOLCHAIN),)
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
-KERNEL_TOOLCHAIN := $(subst linux-androideabi,eabi,$(ANDROID_TOOLCHAIN))
+#KERNEL_TOOLCHAIN := $(subst linux-androideabi,eabi,$(ANDROID_TOOLCHAIN))
+KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/arm/arm-eabi-$(TARGET_GCC_VERSION)
 ifeq ($(wildcard $(KERNEL_TOOLCHAIN)),)
 KERNEL_TOOLCHAIN := $(subst $(TARGET_GCC_VERSION),4.8,$(KERNEL_TOOLCHAIN))
 endif
