@@ -127,7 +127,7 @@
 /(vendor|system/vendor)/bin/time_daemon            u:object_r:time_exec:s0
 /(vendor|system/vendor)/bin/irsc_util              u:object_r:irsc_util_exec:s0
 
-/(vendor|system/vendor)/etc/qcril.db               u:object_r:radio_data_file:s0
+/(vendor|system/vendor)/etc/qcril.db               u:object_r:radio_vendor_data_file:s0
 
 # Binderized services
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service.qcom     u:object_r:hal_power_default_exec:s0
