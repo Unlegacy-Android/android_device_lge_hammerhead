@@ -11,10 +11,8 @@ allow sensors self:capability { setuid setgid };
 allow sensors self:capability chown;
 dontaudit sensors self:capability fsetid;
 
-# In a future release of Android, /data/app/sensor_ctl_socket moved
-# to /dev/socket/sensor_ctl_socket .
+# Create /dev/socket/sensors/ctl
 allow sensors sensors_socket:sock_file create_file_perms;
-type_transition sensors socket_device:sock_file sensors_socket "sensor_ctl_socket";
 allow sensors socket_device:dir rw_dir_perms;
 
 # Create directories and files under /data/misc/sensors

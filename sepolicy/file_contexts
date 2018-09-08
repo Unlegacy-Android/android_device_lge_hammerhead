@@ -97,7 +97,7 @@
 /dev/sensors                           u:object_r:sensors_device:s0
 
 # Sensor socket
-/dev/socket/sensor_ctl_socket          u:object_r:sensors_socket:s0
+/dev/socket/sensors(/.*)?              u:object_r:sensors_socket:s0
 
 /dev/cpu_dma_latency               u:object_r:power_control_device:s0
 
