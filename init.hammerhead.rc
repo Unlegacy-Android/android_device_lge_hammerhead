@@ -313,7 +313,7 @@ service netmgrd /vendor/bin/netmgrd
 service sensors /vendor/bin/sensors.qcom
     class main
     user system
-    group system wakelock
+    group system net_raw wakelock
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
