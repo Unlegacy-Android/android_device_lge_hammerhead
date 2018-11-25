@@ -6,7 +6,9 @@ qmux_socket(system_server)
 unix_socket_connect(system_server, sensors, sensors)
 unix_socket_send(system_server, sensors, sensors)
 allow system_server sensors:unix_stream_socket sendto;
+allow system_server sensors_socket:dir search;
 allow system_server sensors_socket:sock_file r_file_perms;
+allow system_server proc_last_kmsg:file r_file_perms;
 
 # Read /data/tombstones/ramdump files.
 allow system_server ramdump_data_file:dir r_dir_perms;

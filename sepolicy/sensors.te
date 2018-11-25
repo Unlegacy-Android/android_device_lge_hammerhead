@@ -12,6 +12,7 @@ allow sensors self:capability chown;
 dontaudit sensors self:capability fsetid;
 
 # Create /dev/socket/sensors/ctl
+allow sensors sensors_socket:dir w_dir_perms;
 allow sensors sensors_socket:sock_file create_file_perms;
 allow sensors socket_device:dir rw_dir_perms;
 

@@ -125,6 +125,7 @@ PRODUCT_PACKAGES := \
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Live Wallpapers
@@ -138,6 +139,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     libgenlock \
     android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
     hwcomposer.msm8974 \
     android.hardware.memtrack@1.0-impl \
     memtrack.msm8974 \
@@ -159,6 +161,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
     audio.primary.msm8974 \
     audio.a2dp.default \
     audio.usb.default \

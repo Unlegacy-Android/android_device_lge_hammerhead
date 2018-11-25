@@ -10,7 +10,7 @@ net_domain(netmgrd)
 allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
 
 # Starts as (root,radio) changes to (radio,radio)
-allow netmgrd self:capability { setuid setgid net_admin net_raw };
+allow netmgrd self:capability { setuid setgid setpcap net_admin net_raw };
 
 # Triggers a sys_module denial, but kernel has CONFIG_MODULES=n.
 dontaudit netmgrd self:capability sys_module;
@@ -41,3 +41,5 @@ set_prop(netmgrd, net_radio_prop)
 # Access to /proc/sys/net/*
 allow netmgrd proc_net:file rw_file_perms;
 allow netmgrd proc_net:dir r_dir_perms;
+
+allow netmgrd sysfs_android_usb:file open;

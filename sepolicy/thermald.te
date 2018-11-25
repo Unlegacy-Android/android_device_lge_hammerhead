@@ -10,13 +10,7 @@ allowxperm thermald self:socket ioctl msm_sock_ipc_ioctls;
 
 # CPU hotplug uevent
 allow thermald self:netlink_kobject_uevent_socket { create setopt bind read };
-# b/12450712: The dac_override should likely be fixed. It is included to
-# allow access to a few /sys/module/msm_thermal/ files. Once
-# the proper perms on those files are fixed this can likely be
-# reverted. We also want to auditallow every instance
-# of dac_override to track its behavior.
-allow thermald self:capability { dac_override net_admin };
-auditallow thermald self:capability dac_override;
+allow thermald self:capability net_admin;
 
 # Talk to qmuxd (/dev/socket/qmux_radio)
 qmux_socket(thermald)
@@ -37,6 +31,7 @@ allow thermald sysfs_devices_system_cpu:file rw_file_perms;
 allow thermald sysfs:file write;
 
 r_dir_file(thermald, sysfs_leds)
+allow thermald sysfs_leds:file write;
 
 # /devices/soc0/{hw_platform,soc_id} (thermal-engine-hh)
 r_dir_file(thermald, sysfs_soc)
